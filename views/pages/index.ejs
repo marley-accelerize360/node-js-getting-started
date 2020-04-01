@@ -7,7 +7,7 @@
 <div id="lexcontainer">
 
 </div>
-<script src="https://uat-eip.cs34.force.com/inbound/lightning/lightning.out.js"></script>
+<script src="https://partialdev-studentchoicetestcommunity.cs35.force.com/scheduler/lightning/lightning.out.js"></script>
 <script>
     $Lightning.use("c:lightningOutGuest",
         function() {                  // Callback once framework and app load
@@ -16,10 +16,10 @@
                 { },    // attributes to set on the component when created
                 "lexcontainer",    // the DOM location to insert the component
                 function(component) {            // API name of the Flow
-                    component.startFlow("Guest_Inbound_External");
+                    component.startFlow("Inbound_New_Guest_Appointment_Test");
                 }
             );
-        },    'https://uat-eip.cs34.force.com/inbound'  // Community endpoint
+        },    'https://partialdev-studentchoicetestcommunity.cs35.force.com/scheduler'  // Community endpoint
     );
 </script>
 </body>
