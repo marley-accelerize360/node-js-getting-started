@@ -27,7 +27,13 @@
 </script>
 <script>
 document.addEventListener("DOMNodeInserted", function(e) {
-  if(document.querySelector("#top > div > div > fieldset > div > div > div > label > div > article > div.slds-media__body > div > dl:nth-child(2) > dd") && document.querySelector("#top > div > div > fieldset > div > div > div > label > div > article > div.slds-media__body > div > dl:nth-child(2) > dd").innerHTML == 'Technician'){document.querySelector("#top > div > div > fieldset > div > div > div > label > div > article > div.slds-media__body > div > dl:nth-child(2) > dd").innerHTML = "Counselor"}
+  var elements = document.querySelectorAll('dd[title~="Technician"]');
+  if(elements.length !== 0){
+  	for(i in elements){
+  		elements[i].title = 'Counselor'
+  		elements[i].innerHTML = 'Counselor'
+  	}
+  }
 }, false);
 </script>
 </body>
