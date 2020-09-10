@@ -10,7 +10,7 @@
 <div id="lexcontainer">
 
 </div>
-<script src="https://studentchoice.force.com/scheduler/lightning/lightning.out.js"></script>
+<script src="https://don-smacommunities.cs36.force.com/GuestAppointmentsPage/lightning/lightning.out.js"></script>
 <script>
     $Lightning.use("c:lightningOutGuest",
         function() {                  // Callback once framework and app load
@@ -19,22 +19,11 @@
                 { },    // attributes to set on the component when created
                 "lexcontainer",    // the DOM location to insert the component
                 function(component) {            // API name of the Flow
-                    component.startFlow("Inbound_Guest_Custom");
+                    component.startFlow("Inbound_New_Guest_Appointment_Custom");
                 }
             );
-        },    'https://studentchoice.force.com/scheduler'  // Community endpoint
+        },    'https://don-smacommunities.cs36.force.com/GuestAppointmentsPage'  // Community endpoint
     );
-</script>
-<script>
-document.addEventListener("DOMNodeInserted", function(e) {
-  var elements = document.querySelectorAll('dd[title~="Technician"]');
-  if(elements.length !== 0){
-  	for(i in elements){
-  		elements[i].title = 'Counselor'
-  		elements[i].innerHTML = 'Counselor'
-  	}
-  }
-}, false);
 </script>
 </body>
 </html>
